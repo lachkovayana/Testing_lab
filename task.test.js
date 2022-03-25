@@ -30,6 +30,14 @@ describe("Invalid values", () => {
   test('Faces with invalid noses', () => {
     expect(countSmileys([':/D', ';*D', ';o(', ';oD'])).toBe(0);
   });
+  
+  test('Faces with invalid eyes', () => {
+    expect(countSmileys(['%-D', '>-D', '!~(', '/~D'])).toBe(0);
+  });
+  
+  test('Faces with invalid mouths', () => {
+    expect(countSmileys([':-=', ':-!', ';~|', ';~?'])).toBe(0);
+  });
 })
 
 describe("Both valid and invalid faces", () => {
@@ -47,15 +55,13 @@ describe("Wrong input", () => {
     expect(countSmileys(['', ' '])).toBe(0);
   });
   
-  test('Strings values', () => {
+  test('Some strings values', () => {
     expect(countSmileys([':', '-', ')', '-)',')-)','::)', 'abc'])).toBe(0);
   });
 
   test('Wrong types', () => {
     expect(countSmileys([1, [1, 2, 3], (1, 2), () => 123], null, undefined)).toBe(0);
   });
-  
- 
   
 })
 
