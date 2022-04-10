@@ -1,4 +1,4 @@
-import {countSmileys} from "./task";
+import {countSmileys} from "../scripts/task";
 import supertest from "supertest"
 const request = supertest("http://localhost:8191/")
 

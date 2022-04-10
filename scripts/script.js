@@ -58,7 +58,7 @@ function loadTasks() {
 }
 
 function createElement() {
-    let input = document.querySelector("input#text").value
+    let input = document.querySelector("#input_text").value
     let result = countSmileys(input.split(", "))
     let data = { input, result }
     postRequest(url, data)
