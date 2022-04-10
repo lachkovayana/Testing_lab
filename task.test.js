@@ -1,9 +1,9 @@
-import {countSmileys, createNewElementDB} from "./task";
+import {countSmileys} from "./task";
 import supertest from "supertest"
 const request = supertest("http://localhost:8191/")
 
 
-test('Create a POST request to /task', async() => {
+test('POST new task', async() => {
   const input = ":), :(, :-D"
   const taskData = {
       input,
@@ -14,11 +14,28 @@ test('Create a POST request to /task', async() => {
     .post("task")
     .send(taskData);
 
+  expect(newTask.statusCode).toBe(200);
   expect(newTask.body).toHaveProperty("id");
   expect(newTask.body.input).toBe(":), :(, :-D");
-  expect(newTask.statusCode).toBe(200);
-  // console.log(newTask.body);
+  expect(newTask.body.result).toBe(2);
 });
+
+test('GET all tasks', async() => {
+  const req = await request
+    .get("task")
+
+  expect(req.statusCode).toBe(200);
+  expect(Array.isArray(req.body)).toBe(true);
+});
+
+test('DELETE all tasks', async() => {
+  const req = await request
+    .delete("task")
+
+  expect(req.statusCode).toBe(200);
+
+});
+
 
 
 
