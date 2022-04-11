@@ -11,10 +11,26 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "jest": "^27.5.1",
+    "jest-cucumber": "^3.0.1",
+    "jest-puppeteer": "^6.1.0",
     "node-sass": "^7.0.1",
+    "pptr-testing-library": "^0.7.0",
+    "puppeteer": "^13.5.2",
     "supertest": "^6.2.2"
   },
+  "jest": {
+    "testMatch": [
+      "**/*.steps.js",
+      "**/*.test.js"
+
+    ],
+    "globalSetup": "jest-environment-puppeteer/setup",
+    "globalTeardown": "jest-environment-puppeteer/teardown",
+    "testEnvironment": "jest-environment-puppeteer", 
+    "testTimeout":60000
+  },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.17.0"
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "jest-environment-puppeteer": "^6.0.3"
   }
 }

@@ -33,9 +33,12 @@ html {
   padding-left: 10px;
   background-color: #f0f5f2; }
 
-ul li {
-  padding: 10px;
-  background-color: #cae5ec;
-  border-radius: 12px;
-  border: #3f4344 dotted 2px;
-  margin-bottom: 5px; }
+ul {
+  list-style-type: none;
+  padding: 0; }
+  ul li {
+    padding: 10px;
+    background-color: #cae5ec;
+    border-radius: 12px;
+    border: #3f4344 dotted 2px;
+    margin-bottom: 5px; }

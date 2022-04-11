@@ -19,7 +19,7 @@ body, html{
 }
 
 html {
-    background-image: url("..resources/background.png");
+    background-image: url("../resources/background.png");
     background-color: #fdffdb38;
 }
 
@@ -56,4 +56,6 @@ ul{
         border: #3f4344 dotted 2px;
         margin-bottom: 5px;
     }
+    list-style-type: none;
+    padding: 0;
 }

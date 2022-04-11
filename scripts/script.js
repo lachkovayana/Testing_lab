@@ -77,4 +77,3 @@ const generateText = (text, count) => {
 }
 
 init()
-

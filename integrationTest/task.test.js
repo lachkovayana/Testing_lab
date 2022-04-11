@@ -2,7 +2,6 @@ import {countSmileys} from "../scripts/task";
 import supertest from "supertest"
 const request = supertest("http://localhost:8191/")
 
-
 test('POST new task', async() => {
   const input = ":), :(, :-D"
   const taskData = {
