@@ -20,8 +20,8 @@
   },
   "jest": {
     "testMatch": [
-      "**/*.steps.js",
-      "**/*.test.js"
+      "**/*.steps.js"
+      
 
     ],
     "globalSetup": "jest-environment-puppeteer/setup",

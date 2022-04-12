@@ -1,4 +1,4 @@
-#btn_clean, #btn_save, #input_text {
+#btn_clear, #btn_save, #input_text {
   height: 30px;
   border-radius: 12px;
   font-weight: 800; }
@@ -18,11 +18,11 @@ html {
   background-image: url("../resources/background.png");
   background-color: #fdffdb38; }
 
-#btn_clean, #btn_save {
+#btn_clear, #btn_save {
   background-color: #cae5ec;
   font-weight: 800; }
 
-#btn_clean {
+#btn_clear {
   margin: 10px auto;
   width: 120px; }
 

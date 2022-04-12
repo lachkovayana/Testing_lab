@@ -5,7 +5,7 @@ const elemList = document.querySelector('#elem_list')
 
 const init = () => {
     document.getElementById("btn_save").addEventListener('click', createElement)
-    document.getElementById("btn_clean").addEventListener('click', deleteRequest)
+    document.getElementById("btn_clear").addEventListener('click', deleteRequest)
     loadTasks()
 }
 
